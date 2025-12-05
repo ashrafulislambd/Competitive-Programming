@@ -31,8 +31,8 @@ struct Node {
             int mid = lo + (hi - lo)/2;
             l = new Node(v, lo, mid); r = new Node(v, mid, hi);
             val = l->val + r->val;
-            mn = min(l->val, r->val);
-            mx = max(l->val, r->val);
+            mn = min(l->val, r->mn);
+            mx = max(l->val, r->mx);
         }
         else {
             val = v[lo];
